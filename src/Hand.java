@@ -27,7 +27,6 @@ public class Hand {
 
     public void Remove(int a) {
       hand.remove(a);
-
     }
 
     public int getCardCount() {

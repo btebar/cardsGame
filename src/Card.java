@@ -12,6 +12,7 @@ public class Card {
     return rank.toString() + suit.toString();
   }
 
+  //compares ranks
   public boolean biggerByRank(Card s){
     boolean Boolean = false;
     if (s.rank.lessThan(this.rank)) {
@@ -22,6 +23,8 @@ public class Card {
     }
     return Boolean;
   }
+
+  //compares suits
   public boolean biggerBySuit(Card s) {
     boolean Boolean = false;
     if (s.suit.lessThan(this.suit)) {

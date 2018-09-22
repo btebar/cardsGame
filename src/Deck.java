@@ -24,6 +24,7 @@ public class Deck {
   }
 
   public void reset(){
+    //resets the whole deck
     int index = 0;
     for (Suit s : Suit.values()) {
       for (Rank r : Rank.values()) {
@@ -31,13 +32,12 @@ public class Deck {
         this.cards[index] = c;
         index++;
       }
-
     }
     this.size = this.cards.length;
   }
 
-
   public void shuffle() {
+    //shuffles the deck, randomizing the game
     for (int i = size-1; i > 0; i--) {
       Card card = cards[i];
       int index = random.nextInt(i);
@@ -48,6 +48,7 @@ public class Deck {
   }
 
   public Card next() {
+    //takes the next card of the deck
     assert (size > 0) : "There must be at least one card";
     size --;
     return cards[size];

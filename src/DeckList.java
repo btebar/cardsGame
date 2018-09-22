@@ -19,14 +19,11 @@ public class DeckList {
     }
   }
   public DeckList(){
-
     for (Suit s : Suit.values()) {
       for (Rank r : Rank.values()) {
         cards.add(new Card(r, s));
       }
-
     }
-
   }
 
 
@@ -34,8 +31,6 @@ public class DeckList {
     for (int i = cards.size()-1; i > 0; i--) {
       int index = random.nextInt(i);
       Collections.swap(cards, i, index);
-
-
     }
   }
 
@@ -52,8 +47,6 @@ public class DeckList {
     }
     System.out.println();
   }
-
-
 
 }
 
